@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/transaction', 'HomeController@transactionInformation');
+Route::get('/buy', 'HomeController@createTransaction');
+Route::get('/response', 'HomeController@responseTransaction');
